@@ -1,3 +1,4 @@
+#coding=utf-8
 import os
 import cv2
 from tqdm import tqdm
@@ -22,7 +23,7 @@ class AUC(object):
 
 
 
-FM = M.Fmeasure()
+FM = M.F1measure()
 MAE = M.MAE()
 
 mask_root = './GT/'
@@ -35,7 +36,7 @@ for mask_name in tqdm(mask_name_list, total=len(mask_name_list)):
     pred = cv2.imread(pred_path, cv2.IMREAD_GRAYSCALE)
     FM.step(pred=pred, gt=mask)
     MAE.step(pred=pred, gt=mask)
-    auc_calculator.step(pred, gt)
+    auc_calculator.step(pred, mask)
 fm = FM.get_results()['fm']
 mae = MAE.get_results()['mae']
 auc_calculator = AUC()
