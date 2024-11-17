@@ -1,4 +1,4 @@
-
+#coding=utf-8
 import numpy as np
 from scipy.ndimage import convolve, distance_transform_edt as bwdist
 
