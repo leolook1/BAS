@@ -1,2 +1,1 @@
-# BAS
-basnet
+boundary assisted network-to be updated
