@@ -1,4 +1,4 @@
-
+#coding=utf-8
 import torch
 import torch.nn as nn
 from module.weight_init import weight_init
