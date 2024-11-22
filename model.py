@@ -199,6 +199,7 @@ class BASNet(nn.Module):
         self.bmm = BMM(32)
         self.output_conv = nn.Conv2d(512, 1, kernel_size=3, padding=1)
         self.edge_conv = nn.Conv2d(512, 1, kernel_size=3, padding=1)
+        self.linearf1 = nn.Conv2d(64, 1, kernel_size=3, stride=1, padding=1)
         self.upsample2_conv = BasicConv2d(32, 32, kernel_size=3, padding=1)
         self.upsample4_conv = BasicConv2d(64, 64, kernel_size=3, padding=1)
         self.upsample8_conv = BasicConv2d(128, 128, kernel_size=3, padding=1)
