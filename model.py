@@ -176,7 +176,7 @@ class FFM(nn.Module):
         fs3 = self.convupf(f3)
         f_add2 = f2+ fs3
         f_conv2 = self.conv2(f_add2)
-        gap = self.self.avg_pool(f_conv2)
+        gap = self.avg_pool(f_conv2)
         gap = self.conv3(gap)
         ffs =  gap + gap2    
         fffm =  self.sigmoid(ffs)
