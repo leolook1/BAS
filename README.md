@@ -1,1 +1,1 @@
-boundary assisted network-to be updated
+boundary assisted-to be updated
